@@ -3,8 +3,10 @@ public class MinutesToSeconds {
         int seconds = minutes * 60;
         return seconds;
     }
-    public static void main(String[] args) {
     
-        System.out.println(" " + compute(525) + " " + "seconds");
+    public static void main(String[] args) {
+       
+        
+        System.out.println(+ compute(525) + " " + "seconds");
     }
 }
