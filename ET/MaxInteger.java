@@ -12,4 +12,4 @@ public class MaxInteger {
     }
 }
 
-// this algorithm finds the biggest integer from an array and prints the value;
+// finds the biggest integer from an array and prints the value;
