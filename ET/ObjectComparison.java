@@ -5,3 +5,4 @@ public class ObjectComparison {
     return firObject == null || secObject == null || !firObject.equals(secObject) ? false : true;
    } 
 }
+

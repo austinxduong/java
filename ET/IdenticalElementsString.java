@@ -10,4 +10,4 @@ public class IdenticalElementsString {
 		return true;
   }
 }
-// loops through a string, and returns true/false of all elements within the string are identical
+// loops through a string, and returns true/false of all elements within the string are identical with a length() method
