@@ -3,10 +3,10 @@ import java.util.HashMap;
 import java.util.Map;
 
 public class HashMaps{
-    public static void characterCount(String inputString) {
+    public static void characterCount(String stringInput) {
         HashMap<Character, Integer> charCountMap = new HashMap<Character, Integer>();
 
-        char[] strArray = inputString.toCharArray();
+        char[] strArray = stringInput.toCharArray();
 
         for (char c : strArray) {
             if (charCountMap.containsKey(c)) {
