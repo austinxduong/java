@@ -24,4 +24,4 @@ public class stackStrInverse1 {
     }
 }
 
-// YMMUY SETSAT AZZIP ESSEHC ATEF | is stack empty?: false
+// ĘJUKĘIZD ,AZZIP YEOOG GIB A SEKAM AZZIP ESSEHC ATEF  | is stack empty?: false
