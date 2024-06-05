@@ -10,11 +10,10 @@ public class stackStrInverse {
         }
 
         String stack = "";
-        while (str.empty () == false) {
+        while (str.empty() == false) {
             stack += str.pop(); 
-            
-            System.out.println(stack.toUpperCase());
             }
+            System.out.println(stack.toUpperCase() + " " + "|" + " " + "is stack empty?:" + " " + stack.isEmpty());
         }
 
     public static void main(String[] args) {
