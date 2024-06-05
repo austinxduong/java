@@ -1,4 +1,4 @@
-package ET;
+package Arrays;
 
 public class ArrayIndex {
     public static int indexAt(int[] array, double i) {

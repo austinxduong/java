@@ -1,4 +1,4 @@
-package ET;
+package Strings;
 
 public class StringCompare {
     public static boolean strCom(String str1, String str2) {

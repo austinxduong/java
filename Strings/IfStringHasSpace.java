@@ -1,4 +1,4 @@
-package ET;
+package Strings;
 
 public class IfStringHasSpace {
     public static boolean stringHasSpace(String str) {

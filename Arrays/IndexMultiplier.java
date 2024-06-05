@@ -1,4 +1,4 @@
-package ET;
+package Arrays;
 
 public class IndexMultiplier{
     public static int IndexArray(int[] array) {

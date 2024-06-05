@@ -1,4 +1,4 @@
-package ET;
+package Recursion;
 
 public class RecursionFactorial {
     public static int factorial(int n) {

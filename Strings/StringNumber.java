@@ -1,4 +1,4 @@
-package ET;
+package Strings;
 
 public class StringNumber{
     public static int toInteger(String str) { // computes a string to an integer,                                     // and this particular method with throw a NumberFormatException

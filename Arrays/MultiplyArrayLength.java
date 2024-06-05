@@ -1,4 +1,4 @@
-package ET;
+package Arrays;
 
 public class MultiplyArrayLength {
     public static int[] MultiplyArrayElements(int[] arr) {

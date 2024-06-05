@@ -1,4 +1,4 @@
-package ET;
+package Arrays;
 
 public class TotalNumArray {
     public static int arrayTotal(int[] arr) {

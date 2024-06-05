@@ -1,4 +1,4 @@
-package ET;
+package Strings;
 
 public class MonthsOfYear {
     public static String monthName(int num) {

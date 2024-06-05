@@ -1,4 +1,4 @@
-package ET;
+package Strings;
 
 public class IdenticalElementsLoop{
     public static boolean Elements(String[] result){

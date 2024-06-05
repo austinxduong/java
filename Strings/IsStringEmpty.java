@@ -1,4 +1,4 @@
-package ET;
+package Strings;
 
 public class IsStringEmpty {
     public static boolean EString(String str) {

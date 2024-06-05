@@ -1,4 +1,4 @@
-package ET;
+package Arrays;
 
 public class ModulusArray {
     public static int[] modulus(int[] arr, int num) {

@@ -1,4 +1,4 @@
-package ET;
+package Recursion;
 
 public class RecursionTotalDigits {
     public static int sum(int n) {

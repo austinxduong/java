@@ -1,4 +1,4 @@
-package ET;
+package Strings;
 
 public class NumberOfD {
     public static int countDs(String str) {

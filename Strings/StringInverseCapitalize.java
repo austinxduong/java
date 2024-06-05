@@ -1,4 +1,4 @@
-package ET;
+package Strings;
 
 public class StringInverseCapitalize {
     public static String strInverse(String str) {

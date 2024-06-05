@@ -1,4 +1,4 @@
-package ET;
+package Strings;
 
 public class IdenticalElementsString {
     public static boolean isIdentical(String str) {
