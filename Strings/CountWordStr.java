@@ -8,6 +8,6 @@ public class CountWordStr {
 
     public static void main(String[] args) {
         String s = "Woah it's almost Summer! & that means more fun times and moments, yay!;)";
-        System.out.println(strCount(s));
+        System.out.println("Word Count Total:" + " " + strCount(s));
     }
 }
