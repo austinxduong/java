@@ -1,4 +1,4 @@
-package Strings;
+package Regex;
 
 public class CountWordStr {
     public static int strCount(String s) {
@@ -11,3 +11,4 @@ public class CountWordStr {
         System.out.println("Word Count Total:" + " " + strCount(s));
     }
 }
+//Word Count Total: 13
