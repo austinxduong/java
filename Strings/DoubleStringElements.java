@@ -14,3 +14,5 @@ public class DoubleStringElements {
         System.out.println(doubleStr(s));
     }
 }
+
+// SSuummmmeerr  ttiimmee  ffuunn
