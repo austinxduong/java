@@ -4,7 +4,7 @@ import java.util.regex.Matcher;
 
 public class DoubleCharString {
     public static boolean dCharS(String word) {
-        Pattern pat = Pattern.compile("");
+        Pattern pat = Pattern.compile("(\\w)\\1+");
         Matcher matcher = pat.matcher(word);
 
         if (matcher.find()) {
