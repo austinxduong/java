@@ -16,7 +16,7 @@ public class VariableNames {
     }
 
     public static void main(String[] args) {
-        String s = "variable_cloud9";
+        String s = "";
         System.out.println(variable(s));
     }
 }
