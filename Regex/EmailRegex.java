@@ -17,7 +17,7 @@ public class EmailRegex {
    } 
 
    public static void main(String[] args) {
-    String emale = "gwhite.mail@hotmail.com";
+    String emale = "gwhite.mail1818@hotmail.com";
 
     System.out.println(email(emale));
    }

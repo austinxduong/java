@@ -5,7 +5,7 @@ import java.util.regex.Matcher;
 
 public class EmailRegexValidation {
     public static boolean email(String emale) {
-        Pattern pat = Pattern.compile("^(\\w+)((.))(\\w+)@(\\w+)\\.(\\w+)$");
+        Pattern pat = Pattern.compile("^(\\w+)((.*))(\\w+)@(\\w+)\\.(\\w+)$");
         Matcher matcher = pat.matcher(emale);
 
         if (matcher.find()) {
@@ -15,12 +15,17 @@ public class EmailRegexValidation {
         }
     }
     public static void main(String[] args) {
-        String emale = "gwhite.mail@";
+        String emale = "gwhite_mail1818@hotmail.com";
         System.out.println(email(emale));
     }
 }
 
 // gwhite.mail@hotmail.com // true
+// gwhite.mail1818@hotmail.com // true
+// gwhite.mail_1818@hotmail.com // true
+// gwhite.mail.1818@hotmail.com // true
+// gwhite.mail_1818@hotmail.com // true
+// gwhite_mail_1818@hotmail.com // true
 // gwhite.mail@com // false
 // gwhite@com // false
 // ^~^`-* // false
@@ -31,3 +36,4 @@ public class EmailRegexValidation {
 // gwhiteemail@@hotmail..com // false
 // .gwhiteemail@hotmail.com // false
 // gwhiteemail@hotmail.com. // false
+
