@@ -5,7 +5,7 @@ import java.util.regex.Matcher;
 
 public class EmailRegexValidation {
     public static boolean email(String emale) {
-        Pattern pat = Pattern.compile("^(\\w+)((.*))(\\w+)@(\\w+)\\.(\\w+)$");
+        Pattern pat = Pattern.compile("^(\\w+)((.))(\\w+)@(\\w+)\\.(\\w+)$");
         Matcher matcher = pat.matcher(emale);
 
         if (matcher.find()) {

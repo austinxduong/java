@@ -9,18 +9,18 @@ public class HashToString {
         String str = "";
 
         for (String values : array) {
-            str += values;
+            str += values + " ";
         }
-        return str;
+        return str.trim();
     }
 
     public static void main(String[] args) {
         HashMap<String, String> dic = new HashMap<String, String>();
         dic.put("a", "Apple");
-        dic.put("b", "MicroSoft");
+        dic.put("b", "Microsoft");
         dic.put("c", "Google");
         System.out.println(getValues(dic));
     }
 }
 
-// AppleMicroSoftGoogle
+// Apple Microsoft Google

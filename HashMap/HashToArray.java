@@ -7,13 +7,8 @@ import java.util.HashMap;
 public class HashToArray {
     	public static String[] getValues(Map<String,String> dic) {
 		String[] array = dic.values().toArray(new String[0]);
-		String str = "";
-        String[] arr = str.split("\\,");
-		
-		for (String value : array) {
-			str += value + ",";
-		}
-		return arr;
+
+		return array;
 	}
 
     public static void main(String[] args) {
@@ -25,3 +20,6 @@ public class HashToArray {
         System.out.println(Arrays.toString((getValues(dic))));
     }
 }
+
+
+// [Apple, Microsoft, Google]
