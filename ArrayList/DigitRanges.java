@@ -1,7 +1,8 @@
-import java.util.ArrayList;
-// import java.util.Arrays;
+package ArrayList;
 
-public class DigitOccurence {
+import java.util.ArrayList;
+
+public class DigitRanges {
     public static ArrayList<Integer> dOccurences(int min, int max) {
         ArrayList<Integer> arrayList = new ArrayList<Integer>();
 
@@ -14,7 +15,7 @@ public class DigitOccurence {
 
     public static void main(String[] args) {
         int min = 0;
-        int max = 5;
+        int max = 100;
         // int digit = 5;
         System.out.println(dOccurences(min, max));
     }
