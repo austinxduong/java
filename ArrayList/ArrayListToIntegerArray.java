@@ -7,10 +7,10 @@ public class ArrayListToIntegerArray {
     public static Integer[] dOccurences(int min, int max) {
         ArrayList<Integer> arrayList = new ArrayList<Integer>();
         
-        for (int i = min; i < max; i += 1) {
+        for (int i = min; i < max; i+= 1) {
             arrayList.add(min += 1);
         }
-
+        
         Integer[] arr = new Integer[arrayList.size()];
                  arr = arrayList.toArray(arr);
 
