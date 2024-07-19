@@ -7,7 +7,7 @@ public class DigitOccurences {
     
     for (int i = min; i <= max; i++) {
 
-        Integer dg = String.valueOf(i).length() - String.valueOf(i).replaceAll(""+digit, "").length();
+        Integer dg = String.valueOf(i).length() - String.valueOf(i).replaceAll("" +digit, "").length();
 
         total += dg;
 
