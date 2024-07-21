@@ -1,4 +1,4 @@
-public class charPrint {
+public class CharPrint {
     public static char charPrinting(char charr) {
         char c1 = 'A';
         char m3 = '!';
