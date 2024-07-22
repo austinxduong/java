@@ -7,7 +7,7 @@ public class CopyOfArray {
 
     Object[] copy = Arrays.copyOf(array, array.length + 1);
 
-    copy[copy.length -1] = array;
+    copy[copy.length - 1] = array;
     
     return copy;
     }
