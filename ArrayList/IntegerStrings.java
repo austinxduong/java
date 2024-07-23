@@ -1,4 +1,4 @@
-package Arrays;
+package ArrayList;
 
 import java.util.Arrays;
 import java.util.ArrayList;
@@ -9,7 +9,7 @@ public class IntegerStrings {
         ArrayList<String> plentiful = new ArrayList<String>(); 
 
         for (String i : array) {
-            if (i.matches(".*\\d.*")) {
+            if (i.matches("\\w*\\d\\w*")) {
                 plentiful.add(i);
             }
         }
