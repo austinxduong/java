@@ -4,11 +4,13 @@ import java.util.Map;
 
 public class AlphIndexRemix {
 
-public static String alphIndex(String str, Integer[] arr) {
-    String alph = "abdcefghijklmnopqrstuvwxyz";
-    String alphP = ""; 
+public static HashMap<String, Integer> alphIndex(String str, Integer[] arr) {
 
-    String[] alphArray = alph.split("");
+    
+    String arrayInteger = "";
+    // String alphP = ""; 
+
+    String[] alphArray = arr.split("");
 
     HashMap<String, Integer> mapAlph = new HashMap<String, Integer>();
     Integer incr = 0;
@@ -17,33 +19,56 @@ public static String alphIndex(String str, Integer[] arr) {
         mapAlph.put(ea, incr);
         incr++;
 
-        // for (Integer d : arr) {
-        //     for (Map.Entry<String, Integer> entry : mapAlph.entrySet()) {
-        //         if (entry.containsValue(d)) {
-        //             alphP += entry.getKey();
-        //             }
-        //         }
-        //     }
-        }   
-
-        for (Integer d : arr) {
-            for (Map.Entry<String, Integer> entry : mapAlph.entrySet()) {
-                if (entry.getValue() == d);
-                alphP += entry.getKey();
-                }
-            }
- 
-    // for (Map.Entry<String, Integer> entry : mapAlph.entrySet()) {
-    //     for (Integer d : arr) {
-            
-    //         if (entry.containsValue(d)) {
-    //             alphP += entry.getKey();
-    //             }
-    //         }
-    //         return alphP;
-    //     }
-    return alphP;
     }
+
+    for (String e : alphArray) {
+        arrayInteger += e;
+    }
+
+    // for (Integer d : arr) {
+    //     for (Map.Entry<String, Integer> entry : mapAlph.entrySet()) {
+    //         if (entry.getValue().equals(d)) {
+            
+    //         alphP += entry.getKey();
+    //         }
+    //     }
+    // }
+    return mapAlph;
+}
+
+// renders 8 elements, but outputs all keys of the alphabet, rather than the specific key to its corresponding index value hmmm...
+// actual output: adbfcghe
+// expected output: cmourpte
+
+    // for (Integer d : arr) {
+    //     for (Map.Entry<String, Integer> entry : mapAlph.entrySet()) {
+    //         if (entry.getValue() == d);
+                
+    //         alphP += entry.getKey();
+    //         }
+    //     }
+    //     return alphP;
+    // }
+          
+
+    // for (Integer d : arr) {
+    //     for (Map.Entry<String, Integer> entry : mapAlph.entrySet()) {
+    //         if (entry.getValue() == d);
+    //         alphP += entry.getKey();
+    //         }
+    //     }
+ 
+
+    //     for (Map.Entry<String, Integer> entry : mapAlph.entrySet()) {
+    //         for (Integer d : arr) {
+    //         if (entry.containsValue(d)) {
+    //         alphP += entry.getKey();
+    //              }
+    //          }
+    //     return alphP;
+    // }
+  
+
 
 public static void main(String[] args) {
     String str = "computer";
@@ -52,5 +77,3 @@ public static void main(String[] args) {
     System.out.println(alphIndex(str, arr));
     }
 }
-
-// renders 8 elements, but outputs all keys of the alphabet, rather than the specific key to its corresponding index value hmmm...
