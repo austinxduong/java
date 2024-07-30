@@ -9,8 +9,8 @@ public class AlphIndexKey {
 public static String alphIndexKey(String str, Integer[] arr) {
 
     String alph = "abdcefghijklmnopqrstuvwxyz";
-    String alphP = "";
     String[] alphArray = alph.split("");
+    String alphP = "";
 
     HashMap<String, Integer> mapAlph = new HashMap<String, Integer>();
     Integer incr = 0;

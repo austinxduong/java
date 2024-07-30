@@ -1,29 +1,35 @@
-package HashMap;
-import java.util.HashMap;
-import java.util.Map;
+package LinkedHashMap;
+// import java.util.HashMap;
+import java.util.LinkedHashMap;
+// import java.util.Collections;
+// import java.util.ArrayList;
+// import java.util.Map;
+// import java.util.Arrays;
 
 public class AlphIndexRemix {
 
-public static HashMap<String, Integer> alphIndex(String str, Integer[] arr) {
+public static LinkedHashMap<String, Integer> alphIndex(String str, Integer[] arr) {
 
     
-    String arrayInteger = "";
+    // String arrayInteger = "";
     // String alphP = ""; 
 
-    String[] alphArray = arr.split("");
+    String[] alphArray = str.split("");
 
-    HashMap<String, Integer> mapAlph = new HashMap<String, Integer>();
+    LinkedHashMap<String, Integer> mapAlph = new LinkedHashMap<String, Integer>();
+ 
+    
     Integer incr = 0;
 
     for (String ea : alphArray) {
         mapAlph.put(ea, incr);
         incr++;
-
+        
     }
 
-    for (String e : alphArray) {
-        arrayInteger += e;
-    }
+    // for (String e : arr) {
+        
+    // }
 
     // for (Integer d : arr) {
     //     for (Map.Entry<String, Integer> entry : mapAlph.entrySet()) {
@@ -35,6 +41,7 @@ public static HashMap<String, Integer> alphIndex(String str, Integer[] arr) {
     // }
     return mapAlph;
 }
+
 
 // renders 8 elements, but outputs all keys of the alphabet, rather than the specific key to its corresponding index value hmmm...
 // actual output: adbfcghe
@@ -68,8 +75,6 @@ public static HashMap<String, Integer> alphIndex(String str, Integer[] arr) {
     //     return alphP;
     // }
   
-
-
 public static void main(String[] args) {
     String str = "computer";
     Integer[] arr = {0, 2, 1, 5, 3, 6, 7, 4};
@@ -77,3 +82,6 @@ public static void main(String[] args) {
     System.out.println(alphIndex(str, arr));
     }
 }
+
+// linkedhash maps sorts a hashmap
+//computer // {c=0, o=1, m=2, p=3, u=4, t=5, e=6, r=7}
