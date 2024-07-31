@@ -18,8 +18,8 @@ public static String alphIndexKey(String str, Integer[] arr) {
     for (String ea : alphArray) {
         mapAlph.put(ea, incr);
         incr++;
-
     }
+    
     for (Integer d : arr) {
         for (Map.Entry<String, Integer> entry : mapAlph.entrySet()) {
             if (entry.getValue().equals(d)) {
