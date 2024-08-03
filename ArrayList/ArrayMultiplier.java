@@ -6,34 +6,16 @@ import java.util.Arrays;
 public class ArrayMultiplier {
     public static Object[][] arrayMultiplier(Object[] items) {
 
-        // ArrayList<Object> itemsArrayList = new ArrayList<Object>();
-
-
     Integer arrayLength = items.length;
     Object[][] newItems = new Object[arrayLength][arrayLength];
 
-    for (Object e : items) {
-            for (Integer i = 0; i < newItems.length; i++) {
-                for (Integer j = 0; j < newItems[i].length; j++) {
-                    newItems[i][j] = e;
-                    // [[4, 4, 4, 4, 4], [4, 4, 4, 4, 4], [4, 4, 4, 4, 4], [4, 4, 4, 4, 4], [4, 4, 4, 4, 4]]
-
-                    // for (Integer a = 0; a < items.length; a++) {
-                    //     newItems[i][j] = a;
-                    //     }
-                    // }
-
-                }
+    for (Integer i = 0; i < items.length; i++) {
+        for (Integer j = 0; j < items.length; j++) {
+            
+                newItems[i][j] = items[i];
             }
         }
-        
-          
-           
-
-        // }
         return newItems;
-            
-
     }
 
     public static void main(String[] args) {
@@ -67,3 +49,6 @@ for (Integer i = 0; i < newItems.length; i++) {
 //         }
 //     }
 // }
+
+
+//[["a", "a", "a", "a"], [8, 8, 8, 8], ["d", "d", "d", "d"], ["yh", "yh", "yh", "yh"]]
