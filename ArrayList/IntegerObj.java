@@ -4,14 +4,14 @@ import java.util.Arrays;
 import java.util.ArrayList;
 
 public class IntegerObj {
-    public static Object[] integerObj(Object[] arr) {
+    public static Integer[] integerObj(Object[] arr) {
         ArrayList<Object> objArrayList = new ArrayList<Object>();   
 
-        Object[] integerObjArray = new Object[arr.length];
+        Integer[] integerObjArray = new Integer[arr.length];
       
         for (Integer i = 0; i < arr.length; i++) {
             if (arr[i] instanceof Integer) {
-                integerObjArray[i] = arr[i];
+                integerObjArray[i] = (Integer) arr[i];
                 // if value is not type Integer, null values will still be appended to the array
                 // {"null", 81, "null", 1234, "null"}
                 }
@@ -29,11 +29,11 @@ public class IntegerObj {
                 return integerObjArray;
 
             } else {
-                Object[] objArray = new Object[objArrayList.size()];
+                Integer[] objArray = new Integer[objArrayList.size()];
                 Integer index = 0;
 
                 for (Object e : objArrayList) {
-                    objArray[index] = e;
+                    objArray[index] = (Integer) e;
                     index++;
             }
         return objArray;
