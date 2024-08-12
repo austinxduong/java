@@ -1,7 +1,7 @@
 package BinarySearch;
 
-public class BinarySearch {
-    public static Integer binarySearch(int[] sortedArray, int l, int r, int elem) {
+public class BinarySearchIterative {
+    public static Integer binarySearchIterative(int[] sortedArray, int l, int r, int elem) {
         Integer index = 0;
 
         while (l <= r) {
@@ -26,7 +26,7 @@ public class BinarySearch {
         Integer r = 9;
         int elem = 7;
 
-        System.out.println(binarySearch(sortedArray, l, r, elem));
+        System.out.println(binarySearchIterative(sortedArray, l, r, elem));
     }
 }
 
