@@ -1,7 +1,5 @@
 package ArrayList;
 
-import java.util.regex.Pattern;
-import java.util.regex.Matcher;
 import java.util.ArrayList;
 import java.util.Arrays;
 
@@ -11,15 +9,10 @@ public class CMSStringPattern {
         String[] cmsArray = new String[cms.length];
         Integer index = 0;
 
+       
         for (Integer i = 0; i < cms.length; i++) {
-            
-            Pattern patt = Pattern.compile((pat), Pattern.CASE_INSENSITIVE);
-            Matcher matcher = patt.matcher(cms[i]);
-
-
-            if (matcher.find()) {
-                cmsArray[index++] = cms[i];
-            }
+            if (cms[i].contains(pat))
+            cmsArray[index++] = cms[i];
         } // [Drupal, null, null, null]
         
 
@@ -40,7 +33,7 @@ public class CMSStringPattern {
 
     public static void main(String[] args) {
         String[] cms = {"WordPress", "Joomla", "Drupal", "Magento"};
-        String pat = "ru";
+        String pat = "d";
 
         System.out.println(Arrays.toString(cmsStringPattern(cms, pat)));
     }
