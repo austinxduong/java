@@ -10,4 +10,9 @@ public class StringReverse {
         }
         return strWord;
     }
+
+    public static void main(String[] args) {
+        String str = "Apple";
+        System.out.println(reverse(str));
+    }
 }
