@@ -1,34 +1,33 @@
-import java.util.Arrays;
 import java.util.ArrayList;
 
 public class MaskFourWords {
-    public static ArrayList<String> maskFourWords (String words) {
+    public static String maskFourWords (String words) {
         String[] splitWord = words.split(" ");
-        // String[] maskedWord = new String[splitWord.length];
+    
         
         ArrayList<String> maskedArrayList = new ArrayList<String>();
        
 
         for (Integer i = 0; i < splitWord.length; i++) {
-            // for (Integer a = 0; a < splitWord[i].length(); a++) {
-                if (splitWord[i].length() > 4) {
-                    String masked = splitWord[i].replaceAll("\\w", "*");
-                    maskedArrayList.add(masked); //[null, null, null, null********]
-                } else {
-                    maskedArrayList.add(splitWord[i]); // [The, code, is, ********]
-      
-
-                }
+            if (splitWord[i].length() > 4) {
+                String masked = splitWord[i].replaceAll("\\w", "*");
+                maskedArrayList.add(masked); // [********]
+            } else {
+                maskedArrayList.add(splitWord[i]); // [The, code, is, ********]
             }
-        // }
+        }
+        String maskedArrayListString = String.join(" ", maskedArrayList);
         
-        return maskedArrayList; 
-        // [null, null, null, null********]
-        // expected output: The code is ********
+        return maskedArrayListString; 
+
     }
 
     public static void main(String[] args) {
-        String words = "The code is eighteen";
+        String words = "eighteen, nineteen, twenty, twenty-one";
         System.out.print(maskFourWords(words));
     }
 }
+
+// The code is eighteen // The code is ********
+// Its summer in August, and its almost fall season september // Its ****** in ******, and its ****** fall ****** *********
+// eighteen, nineteen, twenty, twenty-one // ********, ********, ******, ******-***
