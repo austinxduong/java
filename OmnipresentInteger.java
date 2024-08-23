@@ -1,19 +1,22 @@
 import java.util.ArrayList;
 
 
+
 public class OmnipresentInteger {
-    public static ArrayList<Integer> omnipresentInteger(int[][] array, int integerr) {
-        ArrayList<Integer> arrayListInteger = new ArrayList<Integer>();
+    public static ArrayList<ArrayList<Integer>> omnipresentInteger(int[][] array, int integerr) {
+        ArrayList<ArrayList<Integer>> arrayListInteger = new ArrayList<ArrayList<Integer>>();
 
+        for (int i = 0; i < array.length; i++) {
+            ArrayList<Integer> subArrays = new ArrayList<Integer>();
 
-        for (Integer i = 0; i < array.length; i++) {
-            for (Integer a = 0; a < array[i].length; a++) {
-                 
-                arrayListInteger.add(array[i][a]);
-                
+            for (int a = 0; a < array[i].length; a++) {
+                subArrays.add(array[i][a]);
             }
-        }
-        return arrayListInteger; // [3, 4, 8, 3, 2, 3, 9, 3, 5, 3, 4, 3]
+            arrayListInteger.add(subArrays);
+    }
+
+
+        return arrayListInteger; // [[3, 4], [8, 3, 2], [3], [9, 3], [5, 3], [4, 3]] // multidimensional array
     }
 
     public static void main(String[] args) {
@@ -22,3 +25,5 @@ public class OmnipresentInteger {
         System.out.println(omnipresentInteger(array, integerr));
     }
 }
+
+                    
