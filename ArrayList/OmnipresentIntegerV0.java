@@ -1,35 +1,49 @@
 package ArrayList;
 
 import java.util.ArrayList;
+import java.util.HashSet;
+import java.util.LinkedHashSet;
 
 
 public class OmnipresentIntegerV0 {
-    public static boolean omnipresentInteger(int[][] array, int integerr) {
+    public static ArrayList<LinkedHashSet<Integer>> omnipresentInteger(int[][] array, int integerr) {
 
-        ArrayList<Integer> integerArrayList = new ArrayList<Integer>();
+        ArrayList<LinkedHashSet<Integer>> integerArrayList = new ArrayList<LinkedHashSet<Integer>>();
         for (int i = 0; i < array.length; i++) {
 
+            LinkedHashSet<Integer> subArray = new LinkedHashSet<Integer>();
+
             for (int a = 0; a < array[i].length; a++) {
-                if (array[i][a] == integerr) {
-                    
-                    integerArrayList.add(array[i][a]);
+                
+                    subArray.add(array[i][a]);
                    
                 }
+                integerArrayList.add(subArray);
             }
-        }
-        int arraySize = array.length; // 6
+            
+    //     int arraySize = array.length; // 6
 
-        if (integerArrayList.size() < arraySize) {
-            return false;
-        }
+    //     if (integerArrayList.size() < arraySize) {
+    //         return false;
+    //     }
+    // }
+
+// ArrayList<Integer> arrayList = new ArrayList<Integer>();
+
+//     for (int e = 0; e < integerArrayList.size(); e++ ) {
+//         for (int d = 0; d < integerArrayList.get(e).size(); d++)
+//         if (integerArrayList.get(e)(d) == integerr) {
+//         }
+//     }
         
-        return true; // [3, 3, 3, 3, 3, 3]
-      
+        // return true; // [3, 3, 3, 3, 3, 3]
+      return integerArrayList;
+            
     }
 
 
     public static void main(String[] args) {
-        int[][] array = {{3, 4}, {8, 3, 2}, {}, {9, 3}, {5, 3}, {4, 3}};
+        int[][] array = {{3, 4}, {8, 3, 3, 2}, {}, {9, 3}, {5, 3}, {4, 3}};
         int integerr = 3;
         System.out.println(omnipresentInteger(array, integerr));
     }
