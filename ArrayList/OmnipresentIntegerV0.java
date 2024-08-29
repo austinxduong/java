@@ -3,12 +3,18 @@ package ArrayList;
 import java.util.ArrayList;
 import java.util.HashSet;
 import java.util.LinkedHashSet;
+import java.util.Arrays;
 
 
 public class OmnipresentIntegerV0 {
-    public static ArrayList<LinkedHashSet<Integer>> omnipresentInteger(int[][] array, int integerr) {
+    public static int omnipresentInteger(int[][] array, int integerr) {
 
         ArrayList<LinkedHashSet<Integer>> integerArrayList = new ArrayList<LinkedHashSet<Integer>>();
+        ArrayList<Integer[]> arrayListYay = new ArrayList<Integer[]>();
+        int[][] arrayInteger = new int[integerArrayList.size()][];
+        Integer[] sArrayInteger = new Integer[13];
+
+
         for (int i = 0; i < array.length; i++) {
 
             LinkedHashSet<Integer> subArray = new LinkedHashSet<Integer>();
@@ -19,7 +25,46 @@ public class OmnipresentIntegerV0 {
                    
                 }
                 integerArrayList.add(subArray);
+
+                Integer[] subArrayInteger = subArray.toArray(new Integer[0]);
+                // Integer[] sArrayInteger = new Integer[10];
+
+               arrayListYay.add(sArrayInteger);
+                for (int r = 0; r < subArrayInteger.length; r++) {
+                    sArrayInteger[i] = subArrayInteger[r];
+                }
             }
+
+            int increment = 0;
+            for (int g = 0; g < arrayListYay.size(); g++) {
+                for (int w = 0; w < arrayListYay.get(g).length; w++) {
+                    if (arrayListYay.get(g)[w] == integerr) {
+                        increment++;
+                }
+                
+
+                }
+            }
+        //     for (int r = 0; r < subArrayInteger.length; r++) {
+        //         sArrayInteger[i] = subArrayInteger[r];
+        //     }
+        // }
+        return increment;
+    }
+                // for (int d = 0; d < integerArrayList.size(); d++) {
+                //  for (int e = 0; e < integerArrayList.size(); e++) {
+                //     integerArrayList.get(d).get(e);
+                //     }
+                // }
+            
+
+        
+        // int[][] arrayInteger = new int[integerArrayList.size()][];
+
+        // for (int d = 0; d < integerArrayList.size(); d++) {
+        //     subArray.toArray();
+        //     arrayInteger[i] = 
+        //     }
             
     //     int arraySize = array.length; // 6
 
@@ -30,16 +75,21 @@ public class OmnipresentIntegerV0 {
 
 // ArrayList<Integer> arrayList = new ArrayList<Integer>();
 
-//     for (int e = 0; e < integerArrayList.size(); e++ ) {
-//         for (int d = 0; d < integerArrayList.get(e).size(); d++)
-//         if (integerArrayList.get(e)(d) == integerr) {
+// }
+//         int[][] arrayInteger = new int[integerArrayList.size()][];
+
+
+//         for (int d = 0; d < integerArrayList.size(); d++) {
+//             arrayInteger[i] = integerArrayList.get(d);
 //         }
-//     }
+
+
         
         // return true; // [3, 3, 3, 3, 3, 3]
-      return integerArrayList;
-            
-    }
+        ;
+//         }
+// }
+
 
 
     public static void main(String[] args) {
