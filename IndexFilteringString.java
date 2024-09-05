@@ -1,4 +1,3 @@
-package LinkedHashMap;
 
 
 public class IndexFilteringString {
