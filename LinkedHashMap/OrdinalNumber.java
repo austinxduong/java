@@ -1,7 +1,12 @@
 package LinkedHashMap;
 
+import java.util.LinkedHashMap;
+
 public class OrdinalNumber {
     public static String ordinalNumber(int integer) {
+
+        LinkedHashMap<Integer, String> linkedHashMap = new  LinkedHashMap<Integer, String>();
+
         
     }
 
