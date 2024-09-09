@@ -28,15 +28,33 @@ public class OrdinalNumber {
         linkedHashMap.put(19, "TH");
         
         
-        String[] sInteger = String.valueOf(integer).split(""); // [5, 5, 3]
-        String sIntegerD = String.valueOf(integer) + "-";
+        String[] sIntegerArray = String.valueOf(integer).split(""); // [5, 5, 3]
+        String sInteger = String.valueOf(integer); // "221"
+        String subString = sInteger.substring(sInteger.length() -2); // "21"
+        String sIntegerD = String.valueOf(integer) + "-"; // "221-""
+        String[] subStringSlice = new String[sInteger.length()];
+        String[] subStringToArray = subString.split("");
 
-        return sInteger; // "553-"
+
+
+
+        // String[] digits = new String[2];
+
+
+        for (int i = subStringToArray.length - 1; i < subStringToArray.length; i++) {
+            if (subStringToArray[i] != "1") {
+                subStringSlice[i] = subStringToArray[subStringToArray.length - 1];
+                }
+               
+            }
+        
+
+        return subStringSlice; // [null, 1, null]
         
     }
 
     public static void main(String[] args) {
-        int integer = 553;
+        int integer = 521;
         System.out.println(ordinalNumber(integer));
         System.out.println(Arrays.toString(ordinalNumber(integer)));
     }
