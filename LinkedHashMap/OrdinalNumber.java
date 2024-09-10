@@ -4,7 +4,7 @@ import java.util.LinkedHashMap;
 import java.util.Arrays;
 
 public class OrdinalNumber {
-    public static String[] ordinalNumber(int integer) {
+    public static String ordinalNumber(int integer) {
 
         LinkedHashMap<Integer, String> linkedHashMap = new  LinkedHashMap<Integer, String>();
         linkedHashMap.put(1, "ST");
@@ -34,6 +34,7 @@ public class OrdinalNumber {
         String sIntegerD = String.valueOf(integer) + "-"; // "221-""
         String[] subStringSlice = new String[sInteger.length()];
         String[] subStringToArray = subString.split("");
+        String subStringInteger = "";
 
 
 
@@ -41,21 +42,29 @@ public class OrdinalNumber {
         // String[] digits = new String[2];
 
 
-        for (int i = subStringToArray.length - 1; i < subStringToArray.length; i++) {
-            if (subStringToArray[i] != "1") {
-                subStringSlice[i] = subStringToArray[subStringToArray.length - 1];
-                }
-               
+        for (int i = 0; i < sInteger.length(); i++) {
+            // if (subStringToArray[subStringToArray.length - 2] != "1") {
+            //     subStringInteger = sInteger.substring(sInteger.length() - 1); 
+            // if (sInteger.indexOf(2) != 1) {
+            //     subStringInteger = sInteger.substring(sInteger.length() -1);
+            // if (sInteger.charAt(1) == 1) {
+                subStringInteger = sInteger.substring(sInteger.length() -2);
+            
+
+            // } else {
+                // subStringInteger = sInteger.substring(sInteger.length() - 2);
+            
+            
             }
         
 
-        return subStringSlice; // [null, 1, null]
+        return subStringInteger; // "18"
         
     }
 
     public static void main(String[] args) {
-        int integer = 521;
+        int integer = 518;
         System.out.println(ordinalNumber(integer));
-        System.out.println(Arrays.toString(ordinalNumber(integer)));
+        // System.out.println(Arrays.toString(ordinalNumber(integer)));
     }
 }
