@@ -36,34 +36,26 @@ public class OrdinalNumber {
         String[] subStringToArray = subString.split("");
         String subStringInteger = "";
 
-
-
-
         // String[] digits = new String[2];
-
 
         for (int i = 0; i < sInteger.length(); i++) {
             // if (subStringToArray[subStringToArray.length - 2] != "1") {
             //     subStringInteger = sInteger.substring(sInteger.length() - 1); 
             // if (sInteger.indexOf(2) != 1) {
             //     subStringInteger = sInteger.substring(sInteger.length() -1);
-            // if (sInteger.charAt(1) == 1) {
-                subStringInteger = sInteger.substring(sInteger.length() -2);
-            
-
-            // } else {
-                // subStringInteger = sInteger.substring(sInteger.length() - 2);
-            
-            
+            if (sInteger.charAt(1) == '1') {
+                subStringInteger = sInteger.substring(sInteger.length() -2); // 521 // 18
+            } else {
+                subStringInteger = sInteger.substring(sInteger.length() -1); // 528 // 8
+                }            
             }
-        
 
         return subStringInteger; // "18"
         
     }
 
     public static void main(String[] args) {
-        int integer = 518;
+        int integer = 528;
         System.out.println(ordinalNumber(integer));
         // System.out.println(Arrays.toString(ordinalNumber(integer)));
     }
