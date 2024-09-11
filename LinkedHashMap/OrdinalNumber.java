@@ -39,10 +39,6 @@ public class OrdinalNumber {
         // String[] digits = new String[2];
 
         for (int i = 0; i < sInteger.length(); i++) {
-            // if (subStringToArray[subStringToArray.length - 2] != "1") {
-            //     subStringInteger = sInteger.substring(sInteger.length() - 1); 
-            // if (sInteger.indexOf(2) != 1) {
-            //     subStringInteger = sInteger.substring(sInteger.length() -1);
             if (sInteger.charAt(1) == '1') {
                 subStringInteger = sInteger.substring(sInteger.length() -2); // 521 // 18
             } else {
