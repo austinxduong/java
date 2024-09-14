@@ -34,7 +34,10 @@ public class OrdinalNumber {
 
 
         for (int i = 0; i < sInteger.length(); i++) {
-            if (sInteger.charAt(1) == '1') {
+            if (sInteger.length() >= 1) {
+                subStringInteger = sInteger;
+            }
+             else if (sInteger.charAt(1) == '1') {
                 subStringInteger = sInteger.substring(sInteger.length() -2); // 521 // 18
             } else {
                 subStringInteger = sInteger.substring(sInteger.length() -1); // 528 // 8
@@ -61,6 +64,9 @@ public class OrdinalNumber {
 // 522 // "ND"
 // 531 // "ST"
 
+// 1 // 1-ST
+// 3 // 3-RD
+// 8 // 8-TH
 // 521 // "521-ST"
 // 523 // "523-RD"
 // 522 // "522-RD"
