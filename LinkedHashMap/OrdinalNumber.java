@@ -1,7 +1,6 @@
 package LinkedHashMap;
 
 import java.util.LinkedHashMap;
-import java.util.Arrays;
 import java.util.Map;
 
 public class OrdinalNumber {
@@ -28,17 +27,11 @@ public class OrdinalNumber {
         linkedHashMap.put("18", "TH");
         linkedHashMap.put("19", "TH");
         
-        
-        String[] sIntegerArray = String.valueOf(integer).split(""); // [5, 5, 3]
         String sInteger = String.valueOf(integer); // "221"
-        String subString = sInteger.substring(sInteger.length() -2); // "21"
         String sIntegerD = String.valueOf(integer) + "-"; // "221-""
-        String[] subStringSlice = new String[sInteger.length()];
-        String[] subStringToArray = subString.split("");
         String subStringInteger = "";
         String linkedSubStringInteger = "";
 
-        // String[] digits = new String[2];
 
         for (int i = 0; i < sInteger.length(); i++) {
             if (sInteger.charAt(1) == '1') {
@@ -52,16 +45,13 @@ public class OrdinalNumber {
             if (entry.getKey().equals(subStringInteger)) {
                 linkedSubStringInteger = entry.getValue();
                     }
-            
         }
-    
-
-        return linkedSubStringInteger; // "ST"
+        return sIntegerD + linkedSubStringInteger; 
         
     }
 
     public static void main(String[] args) {
-        int integer = 521;
+        int integer = 21; // 21- 
         System.out.println(ordinalNumber(integer));
     }
 }
@@ -70,3 +60,8 @@ public class OrdinalNumber {
 // 523 // "RD"
 // 522 // "ND"
 // 531 // "ST"
+
+// 521 // "521-ST"
+// 523 // "523-RD"
+// 522 // "522-RD"
+// 531 // "531-ST"
