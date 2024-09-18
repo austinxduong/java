@@ -2,13 +2,14 @@ package LinkedHashMap;
 
 import java.util.LinkedHashMap;
 import java.util.Map;
+import java.util.TreeMap;
 
 public class BratWurstAlgo {
     public static String bratWurstAlgo(String sentence) {
         String sausage = "Wurst";
         String[] sentenceSplit = sentence.split(" ");
 
-        LinkedHashMap<String, String> linkedHashMapSausage = new LinkedHashMap<String, String>();
+        TreeMap<String, String> linkedHashMapSausage = new TreeMap<String, String>(String.CASE_INSENSITIVE_ORDER);
 
         linkedHashMapSausage.put("Sausage", "Sausage");
         linkedHashMapSausage.put("Kielbasa", "Kielbasa");
@@ -24,19 +25,22 @@ public class BratWurstAlgo {
 
         // (sentenceSplit[i].contains(sausage))
 
+        String words = "";
+
         for(int i = 0; i < sentenceSplit.length; i++) {
             for (Map.Entry<String, String> entry : linkedHashMapSausage.entrySet()) {
                 if (entry.getKey().equals(sentenceSplit[i])) {
-                    sentence.replace("sentenceSplit[i]", "Wurst");
+                // if (entry.getKey().equals(sentenceSplit[i]) || entry.getValue().equals(sentenceSplit[i])) {
+                    words = sentence.replace(sentenceSplit[i], "Wurst");
                 }
             }
 
         }
-        return sentence; // Add the Kielbasa and the reserved potatoes and stir through
-
+        return words; // Add the Wurst with the pepperoni and the reserved potatoes and stir through
     }
+    
     public static void main(String[] args) {
-        String sentence = "Add the Kielbasa and the reserved potatoes and stir through";
+        String sentence = "Add the Kielbasa with the pepperoni and the reserved potatoes and stir through";
         System.out.println(bratWurstAlgo(sentence));
     }
 }
