@@ -15,13 +15,14 @@ public class AtmPinValidation {
     }
 
     public static void main(String[] args) {
-        String s = "";
+        String s = "^*%$#";
         System.out.println(ATMPin(s));
     }
 }
 
 // ^$12345 // false
-// 1234" // true
+// 1234 // true
 // ^^^^^ // false
 // 123456 // true
 // "" // false
+// ^*%$# // false

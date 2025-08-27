@@ -23,6 +23,8 @@ public class BratWurstAlgo {
         linkedHashMapSausage.put("Snorkers", "Snorkers");
         linkedHashMapSausage.put("Pepperoni", "Pepperoni");
 
+
+
         // (sentenceSplit[i].contains(sausage))
 
         String words = "";
@@ -31,16 +33,17 @@ public class BratWurstAlgo {
             for (Map.Entry<String, String> entry : linkedHashMapSausage.entrySet()) {
                 if (entry.getKey().equals(sentenceSplit[i])) {
                 // if (entry.getKey().equals(sentenceSplit[i]) || entry.getValue().equals(sentenceSplit[i])) {
-                    words = sentence.replace(sentenceSplit[i], "Wurst");
+                 String regex = "(?i)sentenceSplit[i]";
+                    words = sentence.replaceAll(regex, "Wurst");
                 }
             }
 
         }
         return words; // Add the Wurst with the pepperoni and the reserved potatoes and stir through
     }
-    
+
     public static void main(String[] args) {
-        String sentence = "Add the Kielbasa with the pepperoni and the reserved potatoes and stir through";
+        String sentence = "Add the Kielbasa with the Pepperoni and the reserved potatoes and stir through";
         System.out.println(bratWurstAlgo(sentence));
     }
 }

@@ -56,7 +56,7 @@ public class OrdinalNumber {
     }
 
     public static void main(String[] args) {
-        int integer = 23; // 21-ST
+        int integer = 21; // 21-ST
         System.out.println(ordinalNumber(integer));
     }
 }
